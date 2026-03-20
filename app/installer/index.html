@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gbe Create</title>
+  <link rel="stylesheet" href="installer.css" />
+</head>
+<body>
+  <div class="hero">
+    <div class="badge">gbe://create</div>
+    <h1>Create a Gbe Site</h1>
+    <p>Map a folder on this computer to a custom <strong>gbe://</strong> domain. No ports, no servers.</p>
+  </div>
+
+  <section class="panel">
+    <h2>New App</h2>
+    <div class="field">
+      <label>Domain name (example: studio)</label>
+      <input id="appName" type="text" placeholder="studio" />
+    </div>
+    <div class="field">
+      <label>Folder path (contains index.html)</label>
+      <div class="row">
+        <input id="appPath" type="text" placeholder="D:\\gbe-sites\\studio" />
+        <button id="browse">Browse</button>
+      </div>
+    </div>
+    <button id="save" class="primary">Create</button>
+    <div id="status" class="status"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Installed Apps</h2>
+    <div id="apps" class="apps"></div>
+  </section>
+
+  <script src="installer.js"></script>
+</body>
+</html>
