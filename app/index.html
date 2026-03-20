@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gbe Browser</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand-logo" src="assets/logo.png" alt="Gbe" />
+      <span>Gbe</span>
+    </div>
+    <div class="tabs" id="tabs">
+      <button class="tab-new" id="newTab" title="New Tab">+</button>
+    </div>
+    <div class="top-actions">
+      <button id="home" title="Home"><img class="mini-logo" src="assets/icon-home.svg" alt="" />Home</button>
+      <button id="install" title="Create"><img class="mini-logo" src="assets/icon-create.svg" alt="" />Create</button>
+      <button id="account" title="Account"><img class="mini-logo" src="assets/icon-account.svg" alt="" />Account</button>
+      <div id="modeBadge" class="mode-badge"><img class="mini-logo invert" src="assets/icon-incognito.svg" alt="" /><span>Incognito</span></div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="nav">
+      <button id="back" title="Back">←</button>
+      <button id="forward" title="Forward">→</button>
+      <button id="reload" title="Reload">⟳</button>
+    </div>
+    <div class="address">
+      <input id="address" type="text" spellcheck="false" placeholder="Search or enter URL" />
+    </div>
+    <div class="actions">
+      <button id="bookmark" title="Bookmark"><img class="mini-logo" src="assets/icon-bookmark.svg" alt="" />☆</button>
+      <button id="showBookmarks" title="Bookmarks"><img class="mini-logo" src="assets/icon-bookmark.svg" alt="" />Bookmarks</button>
+      <button id="showHistory" title="History"><img class="mini-logo" src="assets/icon-history.svg" alt="" />History</button>
+    </div>
+  </div>
+
+  <div id="updateModal" class="update-modal">
+    <div class="update-card">
+      <div class="update-head">
+        <h3 id="updateTitle">Update available</h3>
+        <button id="updateClose" class="panel-close">X</button>
+      </div>
+      <p id="updateText">A new version is ready. Install now or open the update page.</p>
+      <div class="update-actions">
+        <button id="updateBtn" class="update-btn">Update</button>
+        <button id="installBtn" class="update-btn ghost">Install & Restart</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="main">
+    <section class="panel" id="panel">
+      <div class="panel-header">
+        <h2 id="panelTitle">Bookmarks</h2>
+        <button id="panelClose" class="panel-close">X</button>
+      </div>
+      <div id="panelContent" class="panel-content"></div>
+    </section>
+
+    <div class="webviews" id="webviews"></div>
+  </main>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

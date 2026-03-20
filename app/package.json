@@ -1,0 +1,53 @@
+{
+  "name": "gbe-browser",
+  "version": "0.1.1",
+  "description": "Gbe (Guy Browser Engineer) - custom browser with gbe:// protocol",
+  "main": "main.js",
+  "productName": "Gbe Browser",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.gbe.browser",
+    "productName": "Gbe Browser",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "icon": "build/icon.png",
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "guyka2212",
+        "repo": "gbe-browser"
+      }
+    ],
+    "artifactName": "gbe-brewser-installer.${ext}"
+  },
+  "dependencies": {
+    "electron-store": "8.1.0",
+    "electron-updater": "^6.3.9"
+  },
+  "devDependencies": {
+    "electron": "32.0.0",
+    "electron-builder": "24.13.3",
+    "png-to-ico": "^2.1.1"
+  },
+  "author": "Gbe"
+}
