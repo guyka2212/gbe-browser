@@ -15,6 +15,5 @@ pnpm-debug.log*
 Thumbs.db
 
 # Local assets not for repo
-website/downloads/
 errors-picks/
 site-picks/
